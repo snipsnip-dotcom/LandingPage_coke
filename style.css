@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* base */
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #161616;
+}
+
+section .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e51e2a;
+    clip-path: circle(60% at right -20%);
+}
+
+/* header */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 150px;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+}
+
+header .navigation li a {
+    display: flex;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+/* content */
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.content .textBox {
+    position: relative;
+    max-width: 500px;
+    margin-right: 20px;
+}
+
+.content .textBox h2 {
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    font-weight: 700;
+}
+
+.content .textBox p {
+    color: #fff;
+    padding-bottom: 15px;
+}
+
+.content .textBox a {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #e51e2a;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* socials */
+
+.sci {
+    position: absolute;
+    bottom: 30px;
+    left: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    margin-left: 15px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: 0.2s ease-in-out;
+}
+
+.sci li .fb {
+    margin-bottom: 3mpx;
+}
+
+.sci li a:hover {
+    background-color: #e51e2a;
+    transform: translateY(-10px);
+}
+
+.sci li a img {
+    font-size: 100px;
+    filter: invert(1);
+    transform: scale(0.5);
+}
+
+/* swiper */
+
+.swiper-container {
+    width: 100%;
+    margin-top: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+
+.swiper-slide img {
+    /* position: absolute; */
+    bottom: 0;
+    max-height: 75%;
+}
+
+.content .imgBox {
+    width: 500px;
+    margin-left: 125px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content .imgBox img {
+    max-width: 120px;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
+
+.swiper-container-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
+
+/* media query */
+
+@media screen and (max-width: 1307px) {
+    .content .textBox {
+        font-size: 16px;
+    }
+    .content .textBox h2 {
+        font-size: 40px
+    }
+    .content .textBox a {
+        margin-top: 30px;
+    }
+    .sci {
+        bottom: 113px;
+    }
+}
+
+@media screen and (max-width: 1086px) {
+    .header {
+        padding: 46px
+    }
+    .content {
+        flex-direction: column;
+        margin-right: 100px;
+    }
+    .content .textBox {
+        font-size: 13px;
+    }
+    .sci {
+        bottom: 50px;
+    }
+    .content .textBox {
+        font-size: 17px;
+        margin-left: 78px;
+        margin-top: 49px;
+    }
+    .content .imgBox {
+        margin-left: 58px;
+    }
+}
+
+@media screen and (max-width: 552px) {
+    .content .textBox {
+        font-size: 15px;
+        margin-top: 120px;
+    }
+    .content .imgBox {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 905px) {
+    header .navigation {
+        display: none;
+    }
+    .toggle {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(Img/menu.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .toggle.active {
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        right: 40px;
+        background: url(Img/close.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    header .navigation li a {
+        margin: 10px auto;
+        font-size: 1.2em;
+        font-weight: 300;
+    }
+}
+
+header .navigation.active {
+    position: fixed;
+    background: #e51e2a;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+@media screen and (max-width: 508px) {
+    content .textBox {
+        font-size: 13px;
+        margin-top: 105px;
+    }
+    .content .imgBox img {
+        max-width: 108px;
+    }
+    .swiper-slide img {
+        max-height: 69%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 125%;
+        padding: 91px 93px;
+    }
+    header .logo {
+        position: relative;
+        max-width: 120px;
+        margin-left: -50px;
+    }
+    .toggle {
+        position: relative;
+        width: 25px;
+        height: 29px;
+    }
+    .content .textBox {
+        font-size: 13px;
+        margin-left: 50px;
+    }
+    .swiper-slide img {
+        max-height: 60%;
+    }
+    .swiper-container-3d {
+        perspective: 730px;
+    }
+    .content {
+        margin-left: -15px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 125%;
+        padding: 91px 93px;
+    }
+    header .logo {
+        position: relative;
+        max-width: 120px;
+        margin-left: -70px;
+    }
+    .toggle {
+        position: relative;
+        width: 25px;
+        height: 29px;
+        margin-right: 25px;
+    }
+    .content .textBox {
+        font-size: 13px;
+        margin-left: 50px;
+    }
+    .swiper-slide img {
+        max-height: 60%;
+    }
+    .swiper-container-3d {
+        perspective: 730px;
+    }
+    .content {
+        margin-left: -15px;
+    }
+    .swiper-slide img {
+        max-height: 55%;
+    }
+    .sci {
+        bottom: 50px;
+        right: 90px;
+    }
+}

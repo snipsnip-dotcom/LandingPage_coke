@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca-Cola</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="Img/logo.png" alt="logo" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Taste the Feeling</h2>
+                <p>Coca-Cola, is a carbonated soft drink manufactured by The Coca-Cola Company. Originally marketed as a
+                    temperance drink and intended as a patent medicine, it was invented by John Stith Pemberton and was
+                    bought out by businessman Asa Griggs Candler.</p>
+                <a href="https://en.wikipedia.org/wiki/Coca-Cola">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="Img/cocacola1.png" alt="cc1"></div>
+                        <div class="swiper-slide"><img src="Img/cocacola2.png" alt="cc2"></div>
+                        <div class="swiper-slide"><img src="Img/cocacola3.png" alt="cc3"></div>
+                        <div class="swiper-slide"><img src="Img/cocacola4.png" alt="cc4"></div>
+                        <div class="swiper-slide"><img src="Img/cocacola5.png" alt="cc5"></div>
+                        <div class="swiper-slide"><img src="Img/cocacola6.png" alt="cc6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/Coca-Cola/"><img src="Img/facebook.png" alt="facebook_logo"
+                        class="fb"></a></li>
+            <li><a href="https://www.instagram.com/cocacola/"><img src="Img/instagram.png" alt="instagram_logo"></a>
+            </li>
+            <li><a href="https://twitter.com/CocaCola?s=20"><img src="Img/twitter.png" alt="twitter_logo"></a></li>
+
+        </ul>
+    </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 3,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 500,
+                modifier: 1,
+                slideShadows: false,
+
+            },
+            loop: true,
+        });
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector(".toggle")
+            const navigation = document.querySelector(".navigation")
+            menuToggle.classList.toggle("active")
+            navigation.classList.toggle("active")
+        }
+    </script>
+
+</body>
+
+</html>
